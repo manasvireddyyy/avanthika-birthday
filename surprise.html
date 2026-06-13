@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Avanthika 🌷</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Dancing+Script:wght@700&display=swap" rel="stylesheet"> -->
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+ 
+body{
+    height:100vh;
+    background:linear-gradient(135deg,#ffd6e7,#fff5f7);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    overflow:hidden;
+    text-align:center;
+}
+
+h1{
+    font-family:'DM Serif Display',serif;
+    font-size:5rem;
+    color:#d63384;
+}
+
+p{
+    margin-top:20px;
+    font-family:'Dancing Script',cursive;
+    font-size:2rem;
+    color:#555;
+}
+
+.heart{
+    position:absolute;
+    font-size:2rem;
+    animation:float 8s linear infinite;
+}
+
+@keyframes float{
+
+    from{
+        transform:translateY(100vh);
+    }
+
+    to{
+        transform:translateY(-120vh);
+    }
+
+}
+.screen{
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:40px;
+
+    min-height:100vh;
+}
+
+.hidden{
+    display:none;
+}
+
+button{
+
+    margin-top:30px;
+
+    padding:15px 35px;
+
+    border:none;
+
+    border-radius:30px;
+
+    background:#d63384;
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:1rem;
+}
+
+h1{
+    color:#d63384;
+}
+
+h2{
+    color:#555;
+}
+
+.message{
+
+    font-size:2rem;
+
+    font-family:'Dancing Script',cursive;
+
+    margin:20px;
+}
+
+.final-title{
+
+    font-size:3.5rem;
+    line-height:1.2;
+
+    margin-bottom:30px;
+}
+
+.final-message{
+
+    font-family:'Cormorant Garamond',serif;
+}
+.main-line{
+
+    font-family:'Great Vibes',cursive;
+
+    font-size:4rem;
+
+    color:#d63384;
+}
+
+.ending-line{
+
+opacity:0;
+
+animation:
+reveal 2s ease forwards;
+
+animation-delay:4s;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="screen1" class="screen">
+
+    <h2>Before you leave...</h2>
+
+    <p>
+        there's one last thing I want to tell you.
+    </p>
+
+    <button onclick="showScreen2()">
+        Open 💖
+    </button>
+
+</div>
+
+
+<div id="screen2" class="screen hidden">
+
+    <p class="message">
+        Thank you for the memories.
+    </p>
+
+    <p class="message">
+        Thank you for the laughs.
+    </p>
+
+    <p class="message">
+        Thank you for the Tamil lessons.
+    </p>
+
+    <p class="message">
+        Thank you for making Infosys feel like home.
+    </p>
+
+</div>
+
+
+<div id="screen3" class="screen hidden">
+
+    <h1>
+        In another universe...
+    </h1>
+
+    <h2>
+        we'd still end up being friends.
+    </h2>
+
+    <button onclick="showScreen4()">
+        Continue 🌷
+    </button>
+
+</div>
+
+
+<div id="screen4" class="screen hidden">
+
+    <h1>
+        Actually...
+    </h1>
+
+    <h2>
+        I'd probably still<br>
+        low-key flirt with you<br>
+        during our introduction 😂
+    </h2>
+
+    <button onclick="showFinal()">
+        One Last Thing 💖
+    </button>
+
+</div>
+ 
+<div class="final-message">
+
+    <!-- ALL YOUR CURRENT TEXT HERE -->
+     <div id="finalScreen" class="screen hidden">
+
+    <h1 class="final-title">
+    🌷 One Last Thing...
+</h1>
+
+    <p class="final-message">
+
+Some internships give certificates.
+
+<br><br>
+
+Mine gave me Avanthika. 🌷
+
+</p>
+
+<h2 class="main-line">
+❤️ I think I got the better deal.
+</h2>
+
+<p class="final-message">
+
+    <h3>
+        — Manasuvuii
+    </h3>
+
+</div>
+
+<div style="margin-top:40px;">
+
+<a href="letter.html">
+<button>
+⬅ Back
+</button>
+</a>
+
+</div>
+</div>
+
+
+<script src="script.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+<script>
+
+window.onload = () => {
+
+confetti({
+
+particleCount:250,
+
+spread:180,
+
+origin:{y:0.6}
+
+});
+
+};
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>🌸--The Lore of Us--🌸</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:
+    linear-gradient(
+    180deg,
+    #fff5f7,
+    #ffe4ef,
+    rgb(250,211,120)
+    );
+
+    min-height:100vh;
+
+    padding:40px;
+}
+
+.page-title{
+
+    text-align:center;
+
+    color:#ff5d8f;
+
+    font-family:'Playfair Display',serif;
+
+    font-size:4rem;
+
+    margin-bottom:50px;
+}
+
+.memory-card{
+
+    width:700px;
+
+    max-width:90%;
+
+    margin:0 auto;
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:50px;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.12);
+
+    transition:.3s;
+}
+
+.memory-card:hover{
+
+    transform:translateY(-8px);
+}
+
+.memory-card h2{
+
+    color:#ff5d8f;
+
+    font-size:2.2rem;
+
+    margin-bottom:25px;
+}
+
+.memory-card p{
+
+    font-size:1.2rem;
+
+    line-height:2;
+
+    color:#444;
+}
+
+.tap-hint{
+
+    margin-top:30px;
+
+    color:#999;
+
+    font-style:italic;
+}
+
+.nav-buttons{
+
+    text-align:center;
+
+    margin-top:50px;
+}
+
+.nav-buttons a{
+
+    text-decoration:none;
+
+    margin:15px;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    background:
+    linear-gradient(
+    90deg,
+    #ff5d8f,
+    #ff8c42
+    );
+
+    color:white;
+
+    font-weight:600;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1 class="page-title">
+    🌸--The Lore of Us--🌸
+</h1>
+
+<div id="card" class="memory-card">
+
+```
+<h2 id="title">
+    🌷 Day 1
+</h2>
+
+<p id="memory">
+
+    The first time I met you,
+    it didn't feel like an introduction.
+
+    <br><br>
+
+    It felt like I was low-key flirting already 😂.
+    <br>Iykyk i dint mean it but you should really try modelling it would really work out for you. 
+    <br> before that you have to work on yourself babe you can be role model to someone. Gooo become diva if not now then when?
+
+</p>
+
+<div class="tap-hint">
+    Click anywhere on this card to reveal the next memory 💖
+</div>
+```
+
+</div>
+
+<div class="nav-buttons">
+
+```
+<a href="welcome.html">
+    ⬅ Back
+</a>
+
+<a href="gallery.html">
+    Next ➜
+</a>
+```
+
+</div>
+
+<script>
+
+const memories = [
+
+{
+title:"🌷 Day 1",
+text:"The first time I met you, it didn't feel like an introduction.<br><br>It felt like I was low-key flirting already 😂"
+},
+
+{
+title:"📚 Good morning, Dear tamil mam",
+text:"You taught me Tamil with love and patience.<br><br>I absolutely tortured the language.<br>Yet you never gave up you still were patient. you never said would you even remember and bull shit lol ilyyyy<<<<3 😭"
+},
+
+{
+title:"😭 Exam prep",
+text:"Half the studying was motivating each other.<br><br>The other half was panicking.<br> iykyk how we came over those exams later lol."
+},
+
+{
+title:"☕ Tea Breaks",
+text:"Tea breaks were never about tea breaks lol.<br>The conversations were. and us always going and relaxing on those sofas was the best thing."
+},
+
+{
+title:" The Trip or should i call it tripss 🚃 🚗",
+text:"Best decision ever.<br><br>Without that trip we probably wouldn't be this close today Period🌷"
+},
+
+{
+title:"💍 Promise Rings",
+text:"Tiny rings us three( you , me , keerthana).<br><br>Huge memory. never thought we would go out someday randomlu out and would buy something which would be core memory rn💖"
+},
+
+{
+title:"💖 Thank You",
+text:"Thank you for making Infosys feel less like an internship and more like a memory."
+}
+
+];
+
+let current = 0;
+
+const card = document.getElementById("card");
+const title = document.getElementById("title");
+const memory = document.getElementById("memory");
+
+card.addEventListener("click", () => {
+
+current++;
+
+if(current >= memories.length){
+
+current = 0;
+
+}
+
+title.innerHTML = memories[current].title;
+memory.innerHTML = memories[current].text;
+
+});
+
+</script>
+
+</body>
+</html>
