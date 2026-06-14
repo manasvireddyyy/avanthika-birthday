@@ -152,24 +152,19 @@ body{
     margin:50px auto;
 }
 
-.memory-card{
+.memory-wall{
 
-    position:absolute;
+    display:flex;
 
-    width:600px;
+    flex-wrap:wrap;
 
-    height:320px;
+    justify-content:center;
 
-    background:white;
+    gap:40px;
 
-    border-radius:30px;
+    padding:50px;
 
-    padding:35px;
-
-    box-shadow:
-    0 15px 30px rgba(0,0,0,.12);
-
-    transition:.3s;
+    min-height:auto;
 }
 
 .memory-card h2{
